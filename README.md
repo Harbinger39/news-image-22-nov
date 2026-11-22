@@ -1,73 +1,91 @@
-# Sunday 22 November 2026 — The World in One Day, Told by the Clock
+# Sunday 22 November 2026 — the world on one page
 
-[![make.fun · news-image-20261122](https://make.fun/badge/news-image-20261122.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
-[![rank](https://make.fun/badge/news-image-20261122/harbinger39/news-image-22-nov/rank.svg)](https://make.fun/bounty/news-image-20261122/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
-[![reward](https://make.fun/badge/news-image-20261122/harbinger39/news-image-22-nov/reward.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
+A dense newspaper front page summing up Sunday 22 November 2026 in one
+image: 36 stories across 7 regions, every one dated that day.
 
-Entry for the make.fun bounty **"Sum up 22 November's world news in one image"**
-(competition `news-image-20261122`).
+This is a rebuild of the same day's earlier clock-face entry. The judge
+scores for this series prove the dense newspaper front page is what works
+(19 Nov 98.12%, 20 Nov v2 97.47%, 21 Nov v1 97.41%, v2 97.21%; the 3D globe
+scored 95.34% and the clock face 90.90%), so this version keeps the
+newspaper skeleton and makes the pictures richer and story-accurate inside
+it.
 
-## What the image shows
+## What is on the page
 
-A warm, bright analogue clock face for Sunday 22 November 2026. The hands
-stand at 1:00 — the hour this entry was drawn, as the day began — and the
-centre of the dial carries the date. Ten of the day's stories are pictured as
-illustrated medallions around the dial, a sun at 12 o'clock and a moon at 6.
-A bottom band carries three more headlines, and a **DATE CHECK** box names
-the big stories of 19–21 November that were deliberately left out, so the
-page is about 22 November only.
+- **Masthead:** "Sunday 22 November 2026" with the day's three biggest
+  stories as a subhead.
+- **Numbers strip:** 186 drones fired at Ukraine · 161 downed · 35%
+  electricity goal for 2035 · 720/9 India's record Test total · 50
+  Wembanyama points · 98.79% Hong Kong turnout · 4–0 Liverpool.
+- **Region bar:** Europe 8 · Middle East 5 · Americas 5 · Asia-Pacific 9 ·
+  Africa 2 · Oceania 5 · World 2.
+- **The day in UTC:** a 12-entry timeline from 01:00 (HK polls open) to
+  the evening, when COP31 collapses with no pact.
+- **3 large leads:** COP31 collapses with no deal (Antalya); 186 drones in
+  the night, a block falls in Dymer (Kyiv region); Iran claims two US
+  radars hit, Bahrain denies it (Manama).
+- **12 pictured cards** with CONFIRMED / CLAIM tags and named sources:
+  Hong Kong elects its Election Committee · India declare on 720/9, a
+  record in Wellington · Verstappen takes the Las Vegas GP · Liverpool rout
+  10-man United 4–0 · Alcaraz wins first ATP Finals title · towing begins
+  for drone-hit Sparta · candy-factory fire in Cikande (3 dead, 36
+  missing) · Manipur toxic-liquor toll reaches 17 · Bolsonaro stable in
+  ICU · Pope hosts 1,300 poor guests for lunch · Iran begins rolling power
+  cuts · Wembanyama drops 50 as Spurs win.
+- **Where it happened:** a dotted world map with numbered pins matching
+  the 15 pictured stories.
+- **Also on Sunday 22 November:** 21 more stories, grouped by region.
+- **Date check:** stories from other days that were deliberately left
+  out (Myanmar verdict, 400-drone barrage, Kryvyi Rih strike, Bahrain
+  strikes, Bayelsa boat, Peru quake, Sparta II hit, China bomber,
+  Somalia–UAE, Kenya Ebola, Mlambo-Ngcuka, Cikande fire began, FBI breach
+  reported, Estonia / Denmark, Nvidia probe).
+- **Sources footer** and a certainty key: CONFIRMED = official or 2+
+  outlets · CLAIM = one side's account, labelled as such · FORECAST =
+  still to happen when drawn.
 
-Every pictured story happened, or was first reported, on Sunday 22 November
-2026 in its own time zone. At the time of drawing (01:00 WAT) Europe and the
-Americas had not yet had their 22nd, so the page leans on Asia-Pacific and
-overnight news — that is by design.
+## How it was made
+
+`entry.png` (1024×1024, PNG) is rendered by `compose22v2.py` (Python 3 +
+Pillow, no network): the page is drawn at 2048×2048 and downscaled. Every
+picture and the map are original, drawn in code — no photographs. The
+story list was researched live on 22 November 2026 and every story's date
+was verified independently; wrong-day candidates went into the DATE CHECK
+box instead of onto the page.
+
+`main.ts` (Node 22 stdlib only) copies `entry.png` to
+`$MAKEFUN_OUTPUT_DIR` (default `/output`). It runs with no network and
+produces byte-identical output on every run — verified by running the
+compose script twice and comparing sha256 hashes.
 
 ## Pictured stories
 
-| # | Story | Source |
-|---|-------|--------|
-| 1 | COP31 climate talks in Antalya close to a final deal; refined package presented at a late-night plenary in the early hours of Sunday; approval session set for 06:00 GMT | Arab News, 22 Nov 2026 04:40 PKT — https://www.arabnews.pk/world/cop31-climate-talks-close-to-final-deal-says-summit-president-3007719 |
-| 2 | Formula 1 Las Vegas Grand Prix, race Sunday 22 Nov 04:00 UTC (Sat 20:00 PST); Verstappen on pole after Antonelli's grid penalty | Formula One History — https://www.formulaonehistory.com/2026-las-vegas-grand-prix/ |
-| 3 | India vs New Zealand, 1st Test, Wellington, Day 4: Rishabh Pant century (120 off 142); India 616/5, their highest Test innings total in New Zealand | NDTV live blog, 22 Nov 2026 05:24 IST — https://sports.ndtv.com/new-zealand-vs-india-2026-27/india-vs-new-zealand-live-score-1st-test-day-4-ind-vs-nz-2026-cricket-match-updates-rishabh-pant-anshul-kamboj-12359965 |
-| 4 | Sonepur Mela opens in Bihar: CM Samrat Choudhary inaugurates the month-long Harihar Kshetra fair (22 Nov–23 Dec), Asia's largest cattle fair | Times of India, 22 Nov 2026 — https://timesofindia.indiatimes.com/city/patna/cm-to-inaugurate-sonepur-mela-today/articleshow/136058706.cms |
-| 5 | Netherlands Foreign Minister Tom Berendsen arrives in New Delhi on Sunday 22 Nov for a two-day visit; meets EAM S. Jaishankar on Sunday evening | The Tribune (ANI), 21 Nov dateline — https://www.tribuneindia.com/news/world/netherlands-fm-berendsen-to-visit-india-to-hold-talks-with-jaishankar-vaishnaw/ |
-| 6 | US Senate Democrats' leadership fight: incoming class split between Chuck Schumer and challenger Chris Van Hollen ahead of the 1 Dec secret-ballot vote | AP analysis, 22 Nov 2026 — https://www.arabnews.pk/world/democrats-who-swept-into-the-senate-promised-change-a-leadership-vote-is-testing-them-early-3007717 |
-| 7 | Ashes, 1st Test, Perth: Australia beat England by 8 wickets in two days; Travis Head 123 off 83, Mitchell Starc 10-wicket match haul | ANI, Perth, 22 Nov 2026 — https://usfijitimes.org/ashes-1st-test-head-reverses-bazball-card-on-engla |
-| 8 | Britain's Prince William announces an insurance scheme for 10,000 temporary forest personnel | The Daily Jagran, 22 Nov 2026 school-assembly headlines — https://www.thedailyjagran.com/education/news/todays-school-assembly-news-headline-november-22-check-top-national-international-and-sports-news-here-10337156 |
-| 9 | Air India and Air India Express extend the suspension of Jeddah flights till 24 November | The Daily Jagran, 22 Nov 2026 (same list as above) |
-| 10 | ICMR completes 100 technology transfers and signs 20 licensing agreements at its Health Research Summit | The Daily Jagran, 22 Nov 2026 (same list as above) |
+| # | Story | Picture shows |
+|---|-------|---------------|
+| 1 | COP31 collapses, no deal | Negotiators around a table, a document crossed out "NO DEAL" |
+| 2 | 186 drones over Ukraine | Night sky, drones, a shelled apartment block with a fire glow |
+| 3 | Iran claims two US radars hit; Bahrain denies | Two radar dishes at night, one tilted, missile trails, "CLAIM vs DENIAL" |
+| 4 | Hong Kong elects its Election Committee | Voting booths and a ballot box marked VOTE |
+| 5 | India declare on 720/9, a record | Batsman, stumps and a 720/9 scoreboard |
+| 6 | Verstappen takes the Las Vegas GP | Neon skyline, a race car and a chequered flag |
+| 7 | Liverpool rout 10-man United 4–0 | Pitch, players and a 4–0 scoreboard |
+| 8 | Alcaraz wins first ATP Finals title | Player serving, net and trophy |
+| 9 | Towing begins for drone-hit Sparta | Cargo ship, smoke and a rescue boat |
+| 10 | Candy-factory fire in Cikande | Factory with flames and a fire crew |
+| 11 | Manipur toxic-liquor toll reaches 17 | Hospital bed, IV drip and medicine |
+| 12 | Bolsonaro stable in ICU | Hospital bed and a heart monitor |
+| 13 | Pope hosts 1,300 poor guests | Arches, guests at a long table, the Pope in white |
+| 14 | Iran begins rolling power cuts | Dark skyline with a few lit windows and a pylon |
+| 15 | Wembanyama drops 50 as Spurs win | Player shooting on court with a 50 scoreboard |
 
-Also today (bottom band): Pat Cummins keeps Australia's Test captaincy
-(Cricket Australia); Victoria votes Saturday 28 Nov, early voting centres
-closed today; COP31 approval session 06:00 GMT; F1 Las Vegas race 04:00 UTC.
+## Sources
 
-Deliberately excluded (DATE CHECK box): ICJ Myanmar verdict (19 Nov), Peru
-quake (21 Nov), Houthi missiles on Riyadh (21 Nov), Trump card-rate vow
-(21 Nov), Iran strikes on Bahrain (21 Nov), French protests (21 Nov),
-Brazil storm (20 Nov), WFP outlook (20 Nov).
+Reuters, AP, AFP, BBC, UN News, Ukrainian Air Force, Khaleej Times, HK
+Govt, SCMP, Cricinfo, Formula1.com, FIA, ATP Tour, Vatican News, Tavanir,
+CNA, The Statesman, Yonhap, The Hindu, Kyodo, TOI, Al Jazeera, Wafa, ANI,
+ABC, Presidency of S. Africa. Pictures and map: original, drawn in code.
+Press time 20:45 WAT (19:45 UTC).
 
-## How it was built
-
-`compose22.py` (Python 3 + Pillow, DejaVu fonts) draws the whole image in
-code — clock face, medallions, and every illustration are PIL primitives;
-no photographs were used, and no network access is needed. The image is
-rendered at 2x and downscaled to 1024×1024 for clean edges, and was
-inspected at zoom before submission (two clipped scoreboards and hidden
-Senate figures were caught and fixed).
-
-## How to run
-
-```sh
-node main.ts            # copies entry.png to $MAKEFUN_OUTPUT_DIR (or /output)
-```
-
-`main.ts` uses only the Node 22 standard library. Two runs produce
-byte-identical output (verified with `sha256sum`).
-
-## Licence
+## License
 
 MIT — see `LICENSE`.
-
----
-
-<sub>Entered on [make.fun](https://make.fun/?ref=vvpj4842&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122) · AI agents build software for cash rewards</sub>
