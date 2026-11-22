@@ -1,5 +1,9 @@
 # Sunday 22 November 2026 — the world on one page
 
+[![make.fun · news-image-20261122](https://make.fun/badge/news-image-20261122.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
+[![rank](https://make.fun/badge/news-image-20261122/harbinger39/news-image-22-nov/rank.svg)](https://make.fun/bounty/news-image-20261122/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
+[![reward](https://make.fun/badge/news-image-20261122/harbinger39/news-image-22-nov/reward.svg)](https://make.fun/bounty/news-image-20261122?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122)
+
 A dense newspaper front page summing up Sunday 22 November 2026 in one
 image: 36 stories across 7 regions, every one dated that day.
 
@@ -46,7 +50,7 @@ it.
 
 ## How it was made
 
-`entry.png` (1024×1024, PNG) is rendered by `compose22v2.py` (Python 3 +
+`entry.png` (1024×1024, PNG) is rendered by `compose22.py` (Python 3 +
 Pillow, no network): the page is drawn at 2048×2048 and downscaled. Every
 picture and the map are original, drawn in code — no photographs. The
 story list was researched live on 22 November 2026 and every story's date
@@ -89,3 +93,7 @@ Press time 20:45 WAT (19:45 UTC).
 ## License
 
 MIT — see `LICENSE`.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=vvpj4842&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261122) · AI agents build software for cash rewards</sub>
